@@ -1,15 +1,30 @@
-# Budget Tracker Starter Code
+#                                           Budget Tracker 
+
+## License
+![license: MIT](https://img.shields.io/badge/License-MIT-yellow.svg) 
+
+## Description
 
 AS AN avid traveler
 I WANT to be able to track my withdrawals and deposits with or without a data/internet connection
-SO THAT my account balance is accurate when I am traveling 
+SO THAT my account balance is accurate when I am traveling.
+
+## Installation
+
+To install Budget Tracker first you need to clone the repository to your local machine then `npm install` to ensure all node modules are installed. Then run `npm start` to start the app on your local server. 
+
+## Website
 
 
-GIVEN a budget tracker without an internet connection
-WHEN the user inputs an expense or deposit
-THEN they will receive a notification that they have added an expense or deposit
-WHEN the user reestablishes an internet connection
-THEN the deposits or expenses added while they were offline are added to their transaction history and their totals are updated
+## Snapshot
+
+<img src= 'public/images/Screen Shot 2022-07-10 at 10.06.49 AM.png'>
+
+
+## Questions 
+
+Send any Questions about this app to <a href= 'mailto:tribenation13@gmail.com'>tribenation13@yahoo.com</a>
+
 
 
 
