@@ -45,7 +45,7 @@
             "type": "image/png"
         }
     ],
-    "start_url": "./",
+    "start_url": "/",
     "theme_color": "#ffffff",
     "background_color": "#6666ff",
     "descrption": "An app to help you track your budget whether you're online or off"

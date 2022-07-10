@@ -8,8 +8,8 @@ request.onupgradeneeded = function(event) {
     // save a reference to the database 
     const db = event.target.result;
 
-    // create an object store (table) called `new_transaction`, set it to have an auto incrementing primary key of sorts 
-    db.createObjectStore('new_transaction', { autoIncrement: true });
+    // create an object store (table) called `new_budget_item`, set it to have an auto incrementing primary key of sorts 
+    db.createObjectStore('new_budget_item', { autoIncrement: true });
 };
 
 // upon a successful 
@@ -33,10 +33,10 @@ request.onsuccess = function(event) {
 function saveRecord(record) {
 
     // open a new transaction with the database with read and write permissions 
-    const transaction = db.transaction(['new_transaction'], 'readwrite');
+    const transaction = db.transaction(['new_budget_item'], 'readwrite');
   
-    // access the object store for `new_transaction`
-    const  budgetObjectStore = transaction.objectStore('new_transaction');
+    // access the object store for `new_budget_item`
+    const  budgetObjectStore = transaction.objectStore('new_budget_item');
   
     // add record to your store with add method
     budgetObjectStore.add(record);
@@ -45,10 +45,10 @@ function saveRecord(record) {
 function uploadTransaction() {
 
     // open a transaction on your db
-    const transaction = db.transaction(['new_transaction'], 'readwrite');
+    const transaction = db.transaction(['new_budget_item'], 'readwrite');
   
     // access your object store
-    const budgetObjectStore = transaction.objectStore('new_transaction');
+    const budgetObjectStore = transaction.objectStore('new_budget_item');
   
     // get all records from store and set to a variable
     const getAll = budgetObjectStore.getAll();
@@ -72,10 +72,10 @@ function uploadTransaction() {
           }
 
           // open one more transaction
-          const transaction = db.transaction(['new_transaction'], 'readwrite');
+          const transaction = db.transaction(['new_budget_item'], 'readwrite');
 
-          // access the new_transaction object store
-          const budgetObjectStore = transaction.objectStore('new_transaction');
+          // access the new_budget_item object store
+          const budgetObjectStore = transaction.objectStore('new_budget_item');
           
           // clear all items in your store
           budgetObjectStore.clear();
